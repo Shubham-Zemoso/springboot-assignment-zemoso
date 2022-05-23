@@ -5,7 +5,7 @@
 
 <head>
 
-    <title>Cart</title>
+    <title>Product Details</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,8 +27,8 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" th:href="@{/}">Home</a>
-            <a class="nav-item nav-link  active" th:href="@{/getCart}">Cart</a>
+            <a class="nav-item nav-link active" th:href="@{/}">Home</a>
+            <a class="nav-item nav-link" th:href="@{/getCart}">Cart</a>
             <a class="nav-item nav-link" th:href="@{/getOrders}">Orders</a>
             <a sec:authorize = hasAuthority('ROLE_ADMIN') class="nav-item nav-link" th:href="@{/admin-products}">Admin Home</a>
             <a sec:authorize = hasAuthority('ROLE_ADMIN') class="nav-item nav-link" th:href="@{/showFormAdd}">Add Product</a>
@@ -49,7 +49,9 @@
 
     <br>
     <hr>
-    <img src="" alt="product image" />
+    <div class="text-center">
+        <img height="400" width="500" src="https://thefinanser.com/wp-content/uploads/2019/10/Product.png" class="rounded image-fluid" alt="product image" />
+    </div>
     <hr>
     <br>
 

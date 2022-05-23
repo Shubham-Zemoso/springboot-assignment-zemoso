@@ -18,6 +18,10 @@
 		<maven-jar-plugin.version>3.2.2</maven-jar-plugin.version>
 		<sonar.organization>shubham-zemoso</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.exclusions>
+			**/com/zemoso/ecommerce/ecommerce/controller/**,
+			**/com/zemoso/ecommerce/ecommerce/config/**
+		</sonar.exclusions>
 	</properties>
 	<dependencies>
 		<dependency>

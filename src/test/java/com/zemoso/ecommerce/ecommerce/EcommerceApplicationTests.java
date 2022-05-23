@@ -36,7 +36,11 @@ class EcommerceApplicationTests {
 
     OrderDetail order = new OrderDetail(cart, user, LocalDateTime.now());
 
-    @Test public void applicationContextTest() {   EcommerceApplication.main(new String[] {}); }
+    @Test void applicationContextTest() {
+
+        EcommerceApplication.main(new String[] {});
+        Assertions.assertEquals("Watch", product2.getProductName());
+    }
 
 
     //-------------------Test Product Service------------------
@@ -169,7 +173,7 @@ class EcommerceApplicationTests {
         verify(orderRepository, times(1)).save(order);
     }
 
-//---------------------------------CartItem Service Test-------------------------------
+//---------------------------------Test CartItem Service-------------------------------
 
     @Autowired
     private CartItemService cartItemService;
@@ -184,7 +188,7 @@ class EcommerceApplicationTests {
         verify(cartItemRepository, times(1)).deleteById(id);
     }
 
-//----------------------------------Login Controller Test--------------------------------
+//----------------------------------Test Login Controller--------------------------------
 
     @Test
     void helloTest()
