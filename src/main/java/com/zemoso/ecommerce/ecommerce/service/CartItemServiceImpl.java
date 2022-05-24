@@ -1,6 +1,6 @@
 package com.zemoso.ecommerce.ecommerce.service;
 
-import com.zemoso.ecommerce.ecommerce.dao.CartItemRepository;
+import com.zemoso.ecommerce.ecommerce.jparepository.CartItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

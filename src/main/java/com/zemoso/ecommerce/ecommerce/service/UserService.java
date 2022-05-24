@@ -4,9 +4,9 @@ import com.zemoso.ecommerce.ecommerce.entity.User;
 
 public interface UserService {
 
-    public User findById(String id);
+    User findById(String id);
 
-    public void save(User user);
+    void save(User user);
 
-    public User getCurrentUser();
+    User getCurrentUser();
 }

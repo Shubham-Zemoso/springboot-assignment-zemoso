@@ -69,14 +69,14 @@
       <td th:text="${item.product.productName}" />
       <td th:text="${item.product.price}" />
       <td class="d-flex justify-content-around justify-content-center">
-        <a th:href="@{/addToCart/(productId= ${item.product.id})}"
-           class="btn btn-info btn-sm">
-          +
-        </a>
-        <h5 th:text="${item.quantity}"></h5>
         <a th:href="@{/decreaseInCart/(productId= ${item.product.id})}"
            class="btn btn-info btn-sm">
           -
+        </a>
+        <h5 th:text="${item.quantity}"></h5>
+        <a th:href="@{/addToCart/(productId= ${item.product.id})}"
+           class="btn btn-info btn-sm">
+          +
         </a>
       </td>
 

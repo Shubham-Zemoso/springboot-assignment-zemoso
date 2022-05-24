@@ -1,6 +1,6 @@
 package com.zemoso.ecommerce.ecommerce.service;
 
-import com.zemoso.ecommerce.ecommerce.dao.OrderRepository;
+import com.zemoso.ecommerce.ecommerce.jparepository.OrderRepository;
 import com.zemoso.ecommerce.ecommerce.entity.OrderDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

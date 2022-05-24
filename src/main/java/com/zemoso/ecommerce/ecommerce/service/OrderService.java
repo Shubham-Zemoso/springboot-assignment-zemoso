@@ -4,7 +4,7 @@ import com.zemoso.ecommerce.ecommerce.entity.OrderDetail;
 
 public interface OrderService {
 
-    public void save(OrderDetail orderDetail);
+    void save(OrderDetail orderDetail);
 
-    public OrderDetail findById(int id);
+    OrderDetail findById(int id);
 }

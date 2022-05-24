@@ -1,6 +1,6 @@
 package com.zemoso.ecommerce.ecommerce.service;
 
-import com.zemoso.ecommerce.ecommerce.dao.UserRepository;
+import com.zemoso.ecommerce.ecommerce.jparepository.UserRepository;
 import com.zemoso.ecommerce.ecommerce.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -40,6 +40,9 @@ public class UserServiceImpl implements  UserService{
     @Override
     public User getCurrentUser() {
         Authentication principal = SecurityContextHolder.getContext().getAuthentication();
+        if(principal==null) {
+            return null;
+        }
         User user;
         String username = principal.getName();
         user = findById(username);
